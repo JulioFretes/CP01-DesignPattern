@@ -1,0 +1,7 @@
+Singleton: A classe Biblioteca utiliza o padrão Singleton para garantir que apenas uma instância da classe seja criada. Isso é feito através do uso de um construtor privado e um método estático getInstance() que retorna a única instância da classe.
+
+Observer: A classe Aluno implementa a interface Observer e é notificada quando um livro é emprestado ou devolvido. Isso permite que a classe Aluno mantenha uma lista de livros atualmente emprestados e seja notificada quando um livro é emprestado ou devolvido.
+
+Strategy: A interface CalculadoraMultaStrategy define um método calcularMulta para calcular a multa por atraso na devolução de um livro. A classe Biblioteca possui um campo calculadoraMulta do tipo CalculadoraMultaStrategy que é usado para calcular a multa quando um livro é devolvido. Isso permite que diferentes estratégias de cálculo de multas sejam usadas, dependendo da necessidade.
+
+Template Method: A classe abstrata CalculadoraMultaTemplate implementa o padrão Template Method. Esta classe define um método calcularMulta que implementa o algoritmo geral para calcular a multa por atraso na devolução de um livro, mas delega alguns passos do algoritmo para métodos abstratos que devem ser implementados pelas subclasses. Isso permite que diferentes subclasses implementem diferentes formas de calcular se um empréstimo está atrasado, quantos dias de atraso ele tem e qual é o valor da multa por dia de atraso.
